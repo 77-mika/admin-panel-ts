@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+    font-family: "shabnam";
+    src: url("assets/fonts/Shabnam.woff2");
+}
+
+/* ===== Light theme (default on :root) ===== */
+:root {
+    --bg-primary: #F2F2F7;
+    --bg-grouped: #F2F2F7;
+    --bg-card: #FFFFFF;
+    --bg-card-alt: #F2F2F7;
+    --bg-elevated: #FFFFFF;
+
+    --text-primary: #1C1C1E;
+    --text-secondary: #8A8A8E;
+    --text-link: #007AFF;
+
+    --color-separator: #C6C6C8;
+    --color-ok: #34C759;
+    --color-ok-lighter: #4CD964;
+    --color-warning: #FF9500;
+    --color-warning-lighter: #FFB340;
+    --color-failed: #FF3B30;
+    --color-failed-lighter: #FF6259;
+}
+
+/* ===== Dark theme – override the SAME variable names ===== */
+.dark {
+    --bg-primary: #000000;
+    --bg-grouped: #1C1C1E;
+    --bg-card: #2C2C2E;
+    --bg-card-alt: #3A3A3C;
+    --bg-elevated: #2C2C2E;
+
+    --text-primary: #FFFFFF;
+    --text-secondary: #EBEBF5;
+    --text-link: #0A84FF;
+
+    --color-separator: #38383A;
+    --color-ok: #30D158;
+    --color-ok-lighter: #5FDF79;
+    --color-warning: #FF9F0A;
+    --color-warning-lighter: #FFB84D;
+    --color-failed: #FF453A;
+    --color-failed-lighter: #FF6961;
+}
+
+/* ===== Register the tokens in Tailwind ===== */
+@theme {
+    --color-bg-primary: var(--bg-primary);
+    --color-bg-grouped: var(--bg-grouped);
+    --color-bg-card: var(--bg-card);
+    --color-bg-card-alt: var(--bg-card-alt);
+    --color-bg-elevated: var(--bg-elevated);
+
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-link: var(--text-link);
+
+    --color-separator: var(--color-separator);
+    --color-ok: var(--color-ok);
+    --color-ok-lighter: var(--color-ok-lighter);
+    --color-warning: var(--color-warning);
+    --color-warning-lighter: var(--color-warning-lighter);
+    --color-failed: var(--color-failed);
+    --color-failed-lighter: var(--color-failed-lighter);
+}
+
+/* ===== Global styles ===== */
+* {
+    font-family: "shabnam";
+}
