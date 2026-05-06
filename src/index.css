@@ -1,13 +1,4 @@
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
-
-@font-face {
-    font-family: "shabnam";
-    src: url("assets/fonts/Shabnam.woff2");
-}
-
-/* ===== Light theme (default on :root) ===== */
-:root {
+/* :root {
     --bg-primary: #F2F2F7;
     --bg-grouped: #F2F2F7;
     --bg-card: #FFFFFF;
@@ -16,6 +7,7 @@
 
     --text-primary: #1C1C1E;
     --text-secondary: #8A8A8E;
+    --text-tertiary: #AEAEB2; 
     --text-link: #007AFF;
 
     --color-separator: #C6C6C8;
@@ -27,7 +19,7 @@
     --color-failed-lighter: #FF6259;
 }
 
-/* ===== Dark theme – override the SAME variable names ===== */
+
 .dark {
     --bg-primary: #000000;
     --bg-grouped: #1C1C1E;
@@ -37,6 +29,7 @@
 
     --text-primary: #FFFFFF;
     --text-secondary: #EBEBF5;
+    --text-tertiary: #98989D;
     --text-link: #0A84FF;
 
     --color-separator: #38383A;
@@ -46,30 +39,64 @@
     --color-warning-lighter: #FFB84D;
     --color-failed: #FF453A;
     --color-failed-lighter: #FF6961;
+} */
+
+
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+    font-family: "shabnam";
+    src: url("assets/fonts/Shabnam.woff2");
 }
 
-/* ===== Register the tokens in Tailwind ===== */
 @theme {
-    --color-bg-primary: var(--bg-primary);
-    --color-bg-grouped: var(--bg-grouped);
-    --color-bg-card: var(--bg-card);
-    --color-bg-card-alt: var(--bg-card-alt);
-    --color-bg-elevated: var(--bg-elevated);
+    /* ---------- Light variants (default) ---------- */
+    --color-bg-primary: #F2F2F7;
+    --color-bg-grouped: #F2F2F7;
+    --color-bg-card: #FFFFFF;
+    --color-bg-card-alt: #F2F2F7;
+    --color-bg-elevated: #FFFFFF;
 
-    --color-text-primary: var(--text-primary);
-    --color-text-secondary: var(--text-secondary);
-    --color-text-link: var(--text-link);
+    --color-text-primary: #1C1C1E;
+    --color-text-secondary: #8A8A8E;
+    --color-text-tertiary: #AEAEB2;
+    --color-text-link: #007AFF;
 
-    --color-separator: var(--color-separator);
-    --color-ok: var(--color-ok);
-    --color-ok-lighter: var(--color-ok-lighter);
-    --color-warning: var(--color-warning);
-    --color-warning-lighter: var(--color-warning-lighter);
-    --color-failed: var(--color-failed);
-    --color-failed-lighter: var(--color-failed-lighter);
+    --color-separator: #C6C6C8;
+    --color-ok: #34C759;
+    --color-ok-lighter: #4CD964;
+    --color-warning: #FF9500;
+    --color-warning-lighter: #FFB340;
+    --color-failed: #FF3B30;
+    --color-failed-lighter: #FF6259;
+
+    /* ---------- Dark variants (suffix `-dark`) ---------- */
+    --color-bg-primary-dark: #000000;
+    --color-bg-grouped-dark: #1C1C1E;
+    --color-bg-card-dark: #2C2C2E;
+    --color-bg-card-alt-dark: #3A3A3C;
+    --color-bg-elevated-dark: #2C2C2E;
+
+    --color-text-primary-dark: #FFFFFF;
+    --color-text-secondary-dark: #EBEBF5;
+    --color-text-tertiary-dark: #98989D;
+    --color-text-link-dark: #0A84FF;
+
+    --color-separator-dark: #38383A;
+    --color-ok-dark: #30D158;
+    --color-ok-lighter-dark: #5FDF79;
+    --color-warning-dark: #FF9F0A;
+    --color-warning-lighter-dark: #FFB84D;
+    --color-failed-dark: #FF453A;
+    --color-failed-lighter-dark: #FF6961;
+
+
+    --spacing-app-sidebar-w: 200px;
+    --spacing-app-header-h: 60px;
 }
 
-/* ===== Global styles ===== */
 * {
     font-family: "shabnam";
 }
