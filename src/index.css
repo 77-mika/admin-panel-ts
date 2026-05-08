@@ -54,6 +54,8 @@
 @theme {
     /* ---------- Light variants (default) ---------- */
     --color-bg-primary: #F2F2F7;
+    --color-bg-secondary: #E5E5EA;
+    --color-bg-tertiary: #D1D1D6;
     --color-bg-grouped: #F2F2F7;
     --color-bg-card: #FFFFFF;
     --color-bg-card-alt: #F2F2F7;
@@ -94,7 +96,7 @@
 
 
     --spacing-app-sidebar-w: 300px;
-    --spacing-app-header-h: 60px;
+    --spacing-app-header-h: 70px;
 }
 
 * {

@@ -1,8 +1,10 @@
 
 const Content = () => {
     return (
-        <div className="bg-bg-primary h-screen w-screen  pt-app-header-h " >
-            داشبورد
+        <div className="bg-bg-secondary h-screen w-screen pr-app-sidebar-w pt-app-header-h " >
+            <div>
+                meow
+            </div>
         </div>
     );
 }

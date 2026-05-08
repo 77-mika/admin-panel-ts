@@ -5,8 +5,8 @@ import Sidebar from "./layout/sidebar/Sidebar";
 const App = () => {
     return (
         <div className="">
-            <Sidebar />
             <Header />
+            <Sidebar />
             <Content />
         </div>
     );
