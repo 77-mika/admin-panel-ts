@@ -11,6 +11,7 @@ import { FiUsers } from "react-icons/fi";
 import { TbUserShield } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
 import { FaRegQuestionCircle } from "react-icons/fa";
+import { MdOutlineDiscount } from 'react-icons/md';
 import SidebarItems from "./sidebarItems";
 import ItemsGroup from "./itemsGroup";
 const ListSection = () => {
@@ -45,7 +46,7 @@ const ListSection = () => {
                 <SidebarItems
                     title="مدیریت تخفیف ها"
                     size={27}
-                    Icon={BiSolidDiscount}
+                    Icon={MdOutlineDiscount}
                 />
             </ItemsGroup>
             <ItemsGroup title="سفارشات و سبد خرید">
@@ -70,11 +71,7 @@ const ListSection = () => {
                 <SidebarItems title="همکاران" size={27} Icon={TbUserShield} />
             </ItemsGroup>
             <ItemsGroup title="پشتیبانی و ارتباطات">
-                <SidebarItems
-                    title="سوالات"
-                    size={27}
-                    Icon={FaRegQuestionCircle}
-                />
+
                 <SidebarItems title="پشتیبانی" size={27} Icon={BiSupport} />
             </ItemsGroup>
         </div>

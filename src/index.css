@@ -41,8 +41,6 @@
     --color-failed-lighter: #FF6961;
 } */
 
-
-
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -53,50 +51,54 @@
 
 @theme {
     /* ---------- Light variants (default) ---------- */
-    --color-bg-primary: #F2F2F7;
-    --color-bg-secondary: #E5E5EA;
-    --color-bg-tertiary: #D1D1D6;
-    --color-bg-grouped: #F2F2F7;
-    --color-bg-card: #FFFFFF;
-    --color-bg-card-alt: #F2F2F7;
-    --color-bg-elevated: #FFFFFF;
+    --color-bg-primary: #f2f2f7;
+    --color-bg-secondary: #e5e5ea;
+    --color-bg-tertiary: #d1d1d6;
+    --color-bg-grouped: #f2f2f7;
+    --color-bg-card: #ffffff;
+    --color-bg-card-alt: #f2f2f7;
+    --color-bg-elevated: #ffffff;
 
-    --color-text-primary: #1C1C1E;
-    --color-text-secondary: #8A8A8E;
-    --color-text-tertiary: #AEAEB2;
-    --color-text-link: #007AFF;
+    --color-text-primary: #1c1c1e;
+    --color-text-secondary: #8a8a8e;
+    --color-text-tertiary: #aeaeb2;
+    --color-text-link: #007aff;
 
-    --color-separator: #C6C6C8;
-    --color-ok: #34C759;
-    --color-ok-lighter: #4CD964;
-    --color-warning: #FF9500;
-    --color-warning-lighter: #FFB340;
-    --color-failed: #FF3B30;
-    --color-failed-lighter: #FF6259;
+    --color-separator: #c6c6c8;
+    --color-ok: #34c759;
+    --color-ok-lighter: #4cd964;
+    --color-warning: #ff9500;
+    --color-warning-lighter: #ffb340;
+    --color-failed: #ff3b30;
+    --color-failed-lighter: #ff6259;
 
     /* ---------- Dark variants (suffix `-dark`) ---------- */
     --color-bg-primary-dark: #000000;
-    --color-bg-grouped-dark: #1C1C1E;
-    --color-bg-card-dark: #2C2C2E;
-    --color-bg-card-alt-dark: #3A3A3C;
-    --color-bg-elevated-dark: #2C2C2E;
+    --color-bg-grouped-dark: #1c1c1e;
+    --color-bg-card-dark: #2c2c2e;
+    --color-bg-card-alt-dark: #3a3a3c;
+    --color-bg-elevated-dark: #2c2c2e;
 
-    --color-text-primary-dark: #FFFFFF;
-    --color-text-secondary-dark: #EBEBF5;
-    --color-text-tertiary-dark: #98989D;
-    --color-text-link-dark: #0A84FF;
+    --color-text-primary-dark: #ffffff;
+    --color-text-secondary-dark: #ebebf5;
+    --color-text-tertiary-dark: #98989d;
+    --color-text-link-dark: #0a84ff;
 
-    --color-separator-dark: #38383A;
-    --color-ok-dark: #30D158;
-    --color-ok-lighter-dark: #5FDF79;
-    --color-warning-dark: #FF9F0A;
-    --color-warning-lighter-dark: #FFB84D;
-    --color-failed-dark: #FF453A;
-    --color-failed-lighter-dark: #FF6961;
-
+    --color-separator-dark: #38383a;
+    --color-ok-dark: #30d158;
+    --color-ok-lighter-dark: #5fdf79;
+    --color-warning-dark: #ff9f0a;
+    --color-warning-lighter-dark: #ffb84d;
+    --color-failed-dark: #ff453a;
+    --color-failed-lighter-dark: #ff6961;
 
     --spacing-app-sidebar-w: 300px;
     --spacing-app-header-h: 70px;
+
+    --shadow-inner-subtle: inset 0 1px 3px var(--shadow-color);
+    --shadow-inner-md: inset 0 2px 6px var(--shadow-color);
+    --shadow-inner-strong: inset 0 4px 12px var(--shadow-color);
+    --shadow-inner-deep: inset 0 6px 20px var(--shadow-color);
 }
 
 * {

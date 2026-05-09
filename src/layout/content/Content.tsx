@@ -1,11 +1,11 @@
+import Dashboard from "../../pages/dashboard/Dashboard";
+
 
 const Content = () => {
     return (
-        <div className="bg-bg-secondary h-screen w-screen pr-app-sidebar-w pt-app-header-h " >
-            <div>
-                meow
-            </div>
-        </div>
+        <>
+        <Dashboard/>
+        </>
     );
 }
 

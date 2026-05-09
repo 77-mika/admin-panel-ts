@@ -1,6 +1,8 @@
 import { TbMenu2 } from "react-icons/tb";
 import { TbLogout2 } from "react-icons/tb";
 import ListSection from "./itemsList/ListSection";
+import SidebarItems from "./itemsList/sidebarItems";
+import { TbLayoutDashboard } from 'react-icons/tb';
 
 
 const Sidebar = () => {
@@ -15,11 +17,11 @@ const Sidebar = () => {
                     پنل مدیریت
                 </p>
             </div>
-            <div className="flex items-center justify-between p-2 w-64 h-17 bg-bg-secondary rounded-lg  shadow-inner ">
+            <div className="flex items-center justify-between p-2 w-64 h-17 bg-bg-secondary rounded-xl  shadow-[inset_0_1px_4px_rgba(0,0,0,0.14)] ">
                 <div className="flex items-center gap-1 ">
                     <img
                         src="/pics/avatar.jpg"
-                        className="h-14 w-14 rounded-xl shadow-lg "
+                        className="h-14 w-14 rounded-lg shadow-lg "
                     />
                     <div className="flex flex-col iteme start">
                         <p className="text-text-primary text-md ">نام کاربری</p>
@@ -31,10 +33,15 @@ const Sidebar = () => {
                 <div className="flex h-9 w-9 transition-all  justify-center items-center rounded-full hover:bg-bg-tertiary hover:shadow-lg">
                     <TbLogout2
                         size={30}
-                        className="hover:text-red-900 transition-colors cursor-pointer absolute mr-1 "
+                        className="hover:text-red-900 transition-colors cursor-pointer absolute mr-1 shadow-2xl "
                     />
                 </div>
             </div>
+            <SidebarItems
+                    title="داشبورد"
+                    size={27}
+                    Icon={TbLayoutDashboard}
+                />
             <ListSection/>
         </div>
     );
