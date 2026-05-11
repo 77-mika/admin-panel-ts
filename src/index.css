@@ -73,11 +73,17 @@
     --color-failed-lighter: #ff6259;
 
     /* ---------- Dark variants (suffix `-dark`) ---------- */
-    --color-bg-primary-dark: #000000;
+    /* --color-bg-primary-dark: #000000;
     --color-bg-grouped-dark: #1c1c1e;
     --color-bg-card-dark: #2c2c2e;
     --color-bg-card-alt-dark: #3a3a3c;
-    --color-bg-elevated-dark: #2c2c2e;
+    --color-bg-elevated-dark: #2c2c2e; */
+
+    --color-bg-primary-dark: #0f0f0f; /* a touch lighter than pure black */
+    --color-bg-grouped-dark: #151516; /* darker than before, still lighter than primary */
+    --color-bg-card-dark: #1e1e20; /* deeper grey than original */
+    --color-bg-card-alt-dark: #28282a; /* lowered from the old warmer #3a3a3c */
+    --color-bg-elevated-dark: #1e1e20; /* same as card – keeps elevation surfaces consistent */
 
     --color-text-primary-dark: #ffffff;
     --color-text-secondary-dark: #ebebf5;

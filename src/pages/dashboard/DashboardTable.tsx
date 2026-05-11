@@ -1,0 +1,84 @@
+const DashboardTable = () => {
+    return (
+        <div className="overflow-x-auto shadow-xl rounded-2xl  ">
+            <table className="min-w-full table-auto text-right  ">
+                <thead>
+                    <tr className="border-b border-gray-300 dark:border-neutral-500 dark:bg-bg-card-dark [&>th]:px-4 py-2 text-sm font-medium bg-bg-secondary h-10  ">
+                        <th className="text-text-primary dark:text-text-primary-dark">#</th>
+                        <th className="text-text-primary dark:text-text-primary-dark">دسته</th>
+                        <th className="text-text-primary dark:text-text-primary-dark">عنوان</th>
+                        <th className="text-text-primary dark:text-text-primary-dark">وضعیت</th>
+                        <th className="text-text-primary dark:text-text-primary-dark">عملیات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {/* ردیف نمونه ۱ */}
+                    <tr className="border-b bg-bg-secondary dark:border-neutral-500 dark:bg-bg-card-alt-dark border-gray-200 hover:bg-bg-primary dark:hover:bg-bg-grouped-dark hover:cursor-pointer transition-all ease-in-out [&>td]:last:border-b-0 ">
+                        <td className="px-4 py-3 text-sm text-text-primary dark:text-text-primary-dark ">۱</td>
+                        <td className="px-4 py-3 text-sm  text-text-primary dark:text-text-primary-dark ">لبنیات</td>
+                        <td className="px-4 py-3 text-sm  text-text-primary dark:text-text-primary-dark ">
+                            شیر پاستوریزه ۱ لیتری
+                        </td>
+                        <td className="px-4 py-3 text-sm">
+                            <span className="bg-red-100 text-red-700 px-2 py-1 rounded-full text-xs ">
+                                کمتر از ۵ عدد
+                            </span>
+                        </td>
+                        <td className="px-4 py-3 text-sm">
+                            <button className="text-blue-600 hover:text-blue-800 ml-2">
+                                ویرایش
+                            </button>
+                            <button className="text-red-600 hover:text-red-800">
+                                حذف
+                            </button>
+                        </td>
+                    </tr>
+                    {/* ردیف نمونه ۲ */}
+                    <tr className="border-b bg-bg-secondary dark:border-neutral-500 dark:bg-bg-card-alt-dark  border-gray-200 hover:bg-bg-primary dark:hover:bg-bg-grouped-dark hover:cursor-pointer transition-all ease-in-out [&>td]:last:border-b-0 ">
+                        <td className="px-4 py-3 text-sm text-text-primary dark:text-text-primary-dark">۲</td>
+                        <td className="px-4 py-3 text-sm text-text-primary dark:text-text-primary-dark">پروتئینی</td>
+                        <td className="px-4 py-3 text-sm text-text-primary dark:text-text-primary-dark">
+                            سینه مرغ بسته ۱ کیلویی
+                        </td>
+                        <td className="px-4 py-3 text-sm">
+                            <span className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full text-xs">
+                                در حال اتمام
+                            </span>
+                        </td>
+                        <td className="px-4 py-3 text-sm">
+                            <button className="text-blue-600 hover:text-blue-800 ml-2">
+                                ویرایش
+                            </button>
+                            <button className="text-red-600 hover:text-red-800">
+                                حذف
+                            </button>
+                        </td>
+                    </tr>
+                    {/* ردیف نمونه ۳ */}
+                    <tr className=" bg-bg-secondary dark:border-neutral-500 dark:bg-bg-card-alt-dark  border-gray-200 hover:bg-bg-primary dark:hover:bg-bg-grouped-dark hover:cursor-pointer transition-all ease-in-out [&>td]:last:border-b-0 ">
+                        <td className="px-4 py-3 text-sm  text-text-primary dark:text-text-primary-dark">۳</td>
+                        <td className="px-4 py-3 text-sm text-text-primary dark:text-text-primary-dark">نوشیدنی</td>
+                        <td className="px-4 py-3 text-sm text-text-primary dark:text-text-primary-dark">
+                            آب معدنی ۱.۵ لیتری
+                        </td>
+                        <td className="px-4 py-3 text-sm">
+                            <span className="bg-orange-100 text-orange-700 px-2 py-1 rounded-full text-xs">
+                                موجودی بحرانی
+                            </span>
+                        </td>
+                        <td className="px-4 py-3 text-sm ">
+                            <button className="text-blue-600 hover:text-blue-800 ml-2  ">
+                                ویرایش
+                            </button>
+                            <button className="text-red-600 hover:text-red-800">
+                                حذف
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    );
+};
+
+export default DashboardTable;

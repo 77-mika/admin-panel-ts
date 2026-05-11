@@ -10,72 +10,63 @@ import { TbShoppingCartShare } from "react-icons/tb";
 import { FiUsers } from "react-icons/fi";
 import { TbUserShield } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
-import { FaRegQuestionCircle } from "react-icons/fa";
 import { MdOutlineDiscount } from 'react-icons/md';
 import SidebarItems from "./sidebarItems";
 import ItemsGroup from "./itemsGroup";
-const ListSection = () => {
-    return (
-        <div className="flex flex-col gap-5  " >
-            <ItemsGroup title="فروشگاه" >
-                <SidebarItems
-                    title="گروهبندی محصولات"
-                    size={27}
-                    Icon={LuLayers3}
-                />
-                <SidebarItems
-                    title="مدیریت محصولات"
-                    size={27}
-                    Icon={AiOutlineProduct}
-                />
-                <SidebarItems
-                    title="مدیریت برندها"
-                    size={27}
-                    Icon={TbBrandAppgallery}
-                />
-                <SidebarItems
-                    title="مدیریت گارنتی ها"
-                    size={27}
-                    Icon={LuShieldCheck}
-                />
-                <SidebarItems
-                    title="مدیریت رنگ ها"
-                    size={27}
-                    Icon={BiSolidColor}
-                />
-                <SidebarItems
-                    title="مدیریت تخفیف ها"
-                    size={27}
-                    Icon={MdOutlineDiscount}
-                />
-            </ItemsGroup>
-            <ItemsGroup title="سفارشات و سبد خرید">
-                <SidebarItems
-                    title="مدیریت سبد ها"
-                    size={27}
-                    Icon={TbShoppingCart}
-                />
-                <SidebarItems
-                    title="مدیریت سفارش ها"
-                    size={27}
-                    Icon={TbShoppingCartCopy}
-                />
-                <SidebarItems
-                    title="مدیریت نحوه ارسال"
-                    size={27}
-                    Icon={TbShoppingCartShare}
-                />
-            </ItemsGroup>
-            <ItemsGroup title="کاربران و همکاران">
-                <SidebarItems title="کاربران" size={27} Icon={FiUsers} />
-                <SidebarItems title="همکاران" size={27} Icon={TbUserShield} />
-            </ItemsGroup>
-            <ItemsGroup title="پشتیبانی و ارتباطات">
 
-                <SidebarItems title="پشتیبانی" size={27} Icon={BiSupport} />
-            </ItemsGroup>
-        </div>
-    );
+// Data structure for the sidebar sections
+const sidebarGroups = [
+  {
+    title: "فروشگاه",
+    items: [
+      { title: "گروهبندی محصولات", Icon: LuLayers3, size: 27 },
+      { title: "مدیریت محصولات", Icon: AiOutlineProduct, size: 27 },
+      { title: "مدیریت برندها", Icon: TbBrandAppgallery, size: 27 },
+      { title: "مدیریت گارنتی ها", Icon: LuShieldCheck, size: 27 },
+      { title: "مدیریت رنگ ها", Icon: BiSolidColor, size: 27 },
+      { title: "مدیریت تخفیف ها", Icon: MdOutlineDiscount, size: 27 },
+    ],
+  },
+  {
+    title: "سفارشات و سبد خرید",
+    items: [
+      { title: "مدیریت سبد ها", Icon: TbShoppingCart, size: 27 },
+      { title: "مدیریت سفارش ها", Icon: TbShoppingCartCopy, size: 27 },
+      { title: "مدیریت نحوه ارسال", Icon: TbShoppingCartShare, size: 27 },
+    ],
+  },
+  {
+    title: "کاربران و همکاران",
+    items: [
+      { title: "کاربران", Icon: FiUsers, size: 27 },
+      { title: "همکاران", Icon: TbUserShield, size: 27 },
+    ],
+  },
+  {
+    title: "پشتیبانی و ارتباطات",
+    items: [
+      { title: "پشتیبانی", Icon: BiSupport, size: 27 },
+    ],
+  },
+];
+
+const ListSection = () => {
+  return (
+    <div className={`flex flex-col gap-2 transition-all duration-300 `}>
+      {sidebarGroups.map((group, groupIndex) => (
+        <ItemsGroup key={groupIndex} title={group.title}>
+          {group.items.map((item, itemIndex) => (
+            <SidebarItems
+              key={itemIndex}
+              title={item.title}
+              size={item.size}
+              Icon={item.Icon}
+            />
+          ))}
+        </ItemsGroup>
+      ))}
+    </div>
+  );
 };
 
 export default ListSection;
