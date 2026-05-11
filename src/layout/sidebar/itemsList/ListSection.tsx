@@ -3,7 +3,6 @@ import { AiOutlineProduct } from "react-icons/ai";
 import { TbBrandAppgallery } from "react-icons/tb";
 import { LuShieldCheck } from "react-icons/lu";
 import { BiSolidColor } from "react-icons/bi";
-import { BiSolidDiscount } from "react-icons/bi";
 import { TbShoppingCart } from "react-icons/tb";
 import { TbShoppingCartCopy } from "react-icons/tb";
 import { TbShoppingCartShare } from "react-icons/tb";
@@ -52,7 +51,7 @@ const sidebarGroups = [
 
 const ListSection = () => {
   return (
-    <div className={`flex flex-col gap-2 transition-all duration-300 `}>
+    <div className={`flex flex-col gap-2 w-full`}>
       {sidebarGroups.map((group, groupIndex) => (
         <ItemsGroup key={groupIndex} title={group.title}>
           {group.items.map((item, itemIndex) => (
