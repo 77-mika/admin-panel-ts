@@ -3,7 +3,7 @@ import useUiManagementStore from "../../zustand/store";
 const LoginInfo = () => {
     const sidebarIsOpen = useUiManagementStore((state) => state.sidebarIsOpen);
     return (
-        <div className="w-full flex justify-center items-center transition-all ease-in-out duration-400">
+        <div className="w-full flex justify-start items-center transition-all ease-in-out duration-600">
             <div
                 className={`flex relative overflow-hidden items-center justify-between  bg-bg-secondary dark:bg-bg-card-dark rounded-xl  shadow-[inset_0_1px_4px_rgba(0,0,0,0.14)] p-2 ${sidebarIsOpen ? "w-64  " : "w-18"} transition-all duration-400 `}
             >
@@ -14,14 +14,14 @@ const LoginInfo = () => {
                             className={`h-14 w-14 rounded-lg shadow-lg `}
                         />
                     </div>
-                    <div className={`flex flex-col iteme start`}>
+                    <div className={`flex flex-col iteme transition-all text-nowrap shrink-0 duration-400 start ease-in-out ${sidebarIsOpen ? "max-w-40 opacity-100" : "max-w-0 opacity-0"}`}>
                         <p
-                            className={`text-text-primary text-md dark:text-text-primary-dark ${sidebarIsOpen ? "" : "hidden"} text-nowrap `}
+                            className={`text-text-primary text-md dark:text-text-primary-dark transition-all duration-500  text-nowrap `}
                         >
                             نام کاربری
                         </p>
                         <p
-                            className={`text-text-secondary text-sm text-nowrap ${sidebarIsOpen ? "" : "hidden"}`}
+                            className={`text-text-secondary text-sm text-nowrap transition-all duration-400 `}
                         >
                             mika@gmail.com
                         </p>

@@ -100,6 +100,7 @@
 
     --spacing-app-sidebar-w: 300px;
     --spacing-app-header-h: 70px;
+    --spacing-app-sidebarClose: 120px;
 
     --shadow-inner-subtle: inset 0 1px 3px var(--shadow-color);
     --shadow-inner-md: inset 0 2px 6px var(--shadow-color);
@@ -110,3 +111,52 @@
 * {
     font-family: "shabnam";
 }
+
+
+/* Custom scrollbar class */
+.custom-scrollbar {
+  /* For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Thin scrollbar */
+  background-color: transparent; /* Transparent track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Fully transparent */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* Semi-transparent thumb */
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4); /* Darker on hover */
+}
+
+/* For the corner (if both scrollbars appear) */
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.rightScrollBar{
+    direction: ltr;
+    *{
+        direction: rtl;
+    }
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+  }

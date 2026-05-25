@@ -8,7 +8,7 @@ interface DashboardHeadTopType {
 
 const DashboardHeaderT = ({title,todayCart,lastmonth,lastweek,toman}:DashboardHeadTopType) => {
     return (
-                <div className="bg-bg-tertiary dark:bg-bg-card-alt-dark h-full w-1/4 rounded-lg dark:shadow-white p-4 ">
+                <div className="bg-bg-tertiary dark:bg-bg-card-alt-dark h-full w-1/4 rounded-lg dark:shadow-white p-4 border-2 dark:border-neutral-500 border-neutral-400 ">
                     <div className="flex flex-col  ">
                         <p className="text-lg dark:text-text-secondary-dark" >{title}</p>
                     </div>

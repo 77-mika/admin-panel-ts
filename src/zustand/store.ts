@@ -1,16 +1,18 @@
-import {create} from "zustand"
+import { create } from "zustand";
 
 interface uiStateManager {
-    sidebarIsOpen : boolean;
-    theme: "light" | "dark"
+    sidebarIsOpen: boolean;
+    theme: "light" | "dark";
 }
 
 interface uiActionManager {
-    toggleSidebar:()=>void;
-    setSidebar:(status:boolean)=>void;
-    setTheme:(theme:"light"|"dark")=>void;
-    toggleTheme:()=>void;
+    toggleSidebar: () => void;
+    setSidebar: (status: boolean) => void;
+    setTheme: (theme: "light" | "dark") => void;
+    toggleTheme: () => void;
 }
+
+
 
 const loadFromStorage = <T>(key: string, defaultValue: T): T => {
     const stored = localStorage.getItem(key);
@@ -25,13 +27,14 @@ const saveToStorage = <T>(key: string, value: T): void => {
     localStorage.setItem(key, JSON.stringify(value));
 };
 
-type UiManager = uiStateManager & uiActionManager
+type UiManager = uiStateManager & uiActionManager;
 
-const useUiManagementStore = create<UiManager>((set)=>({
-    sidebarIsOpen : true,
-    toggleSidebar: () => set((state) => ({ sidebarIsOpen: !state.sidebarIsOpen })),
+const useUiManagementStore = create<UiManager>((set) => ({
+    sidebarIsOpen: true,
+    toggleSidebar: () =>
+        set((state) => ({ sidebarIsOpen: !state.sidebarIsOpen })),
     setSidebar: (status: boolean) => set(() => ({ sidebarIsOpen: status })),
-    theme : loadFromStorage("theme", "light"),
+    theme: loadFromStorage("theme", "light"),
     toggleTheme: () =>
         set((state) => {
             const newTheme = state.theme === "light" ? "dark" : "light";
@@ -39,7 +42,6 @@ const useUiManagementStore = create<UiManager>((set)=>({
             return { theme: newTheme };
         }),
     setTheme: (theme: "light" | "dark") => set({ theme }),
-
-}))
+}));
 
 export default useUiManagementStore;

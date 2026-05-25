@@ -1,7 +1,5 @@
 
 import ListSection from "./itemsList/ListSection";
-import SidebarItems from "./itemsList/sidebarItems";
-import { TbLayoutDashboard } from "react-icons/tb";
 import { RiMenuFold2Line } from "react-icons/ri";
 import useUiManagementStore from "../../zustand/store";
 import LoginInfo from "./LoginInfo";
@@ -14,14 +12,14 @@ const Sidebar = () => {
         <div
             className={`
                 fixed h-screen flex flex-col gap-4 rounded-tl-4xl
-                ${sidebarIsOpen ? "w-app-sidebar-w p-6" : "w-25 pt-6"}
+                ${sidebarIsOpen ? "w-app-sidebar-w p-6" : "w-app-sidebarClose p-6"}
                 ease-in-out bg-bg-card-alt dark:bg-bg-card-alt-dark
                 transition-all duration-500 shadow-sm shadow-l border-l-separator
                 dark:shadow-bg-card-alt-dark border-b-0 border-t-0 border-r-0
             `}
         >
             {/* Header row */}
-            <div className={`flex items-center gap-4  ${sidebarIsOpen?"justify-between":"justify-between pl-4"} duration-400 `}>
+            <div className={`flex  items-center gap-4  ${sidebarIsOpen?"justify-between":"justify-between pl-4"} duration-400 `}>
                 {/* Animated title */}
                 <div
                     className={`
@@ -41,7 +39,7 @@ const Sidebar = () => {
             </div>
 
             <LoginInfo />
-            <SidebarItems title="داشبورد" size={27} Icon={TbLayoutDashboard} />
+
             <ListSection />
         </div>
     );
