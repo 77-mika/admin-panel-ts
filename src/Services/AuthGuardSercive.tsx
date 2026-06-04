@@ -6,7 +6,6 @@ import { Navigate, Outlet } from "react-router-dom";
 const AuthGuardSercive = () => {
     const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
     const isCheckingAuth = useAuthStore((state) => state.isCheckingAuth);
-    const setToken = useAuthStore((state) => state.setToken);
     const logout = useAuthStore((state) => state.logout);
     const setCheckingAuth = useAuthStore((state) => state.setCheckingAuth);
 
@@ -16,6 +15,8 @@ const AuthGuardSercive = () => {
             try {
                 await HttpAuthService.get("auth/me");
             } catch (error) {
+                console.log(error);
+                
                 logout();
             } finally {
                 setCheckingAuth(false);

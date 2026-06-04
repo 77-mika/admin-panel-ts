@@ -1,6 +1,6 @@
 const DashboardTable = () => {
     return (
-        <div className="overflow-x-auto shadow-xl rounded-2xl border-2 dark:border-neutral-500 border-neutral-400 ">
+        <div className="overflow-x-auto shadow-xl rounded-2xl border-2 dark:border-neutral-600 border-neutral-400 ">
             <table className="min-w-full table-auto text-right  ">
                 <thead>
                     <tr className="border-b border-gray-400 dark:border-neutral-500 dark:bg-bg-card-dark [&>th]:px-4 py-2 text-sm font-medium bg-bg-secondary h-10  ">
